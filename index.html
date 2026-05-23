@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Naomi Allen — Communications & Marketing Professional</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --cream: #FAF7F2;
+  --cream2: #F2EDE4;
+  --warm-brown: #5C4033;
+  --mid-brown: #8C6954;
+  --light-brown: #C4A882;
+  --teal: #2D7D6F;
+  --teal-light: #E4F2EF;
+  --teal-mid: #5DCAA5;
+  --gold: #C89B3C;
+  --gold-light: #FBF3E0;
+  --text-dark: #2A1F18;
+  --text-mid: #5C4A3C;
+  --text-light: #9C8070;
+  --border: rgba(92,64,51,0.12);
+  --radius: 14px;
+  --radius-sm: 8px;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--cream);
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+/* NAV */
+nav {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(250,247,242,0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 0.5px solid var(--border);
+  padding: 0 2rem;
+  display: flex; align-items: center; justify-content: space-between;
+  height: 60px;
+}
+.nav-logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px; font-weight: 600;
+  color: var(--warm-brown);
+}
+.nav-links { display: flex; gap: 1.75rem; list-style: none; }
+.nav-links a {
+  font-size: 13px; font-weight: 500;
+  color: var(--text-mid); text-decoration: none;
+  transition: color 0.2s;
+}
+.nav-links a:hover { color: var(--teal); }
+@media (max-width: 560px) {
+  .nav-links { gap: 1rem; }
+  .nav-links a { font-size: 12px; }
+}
+
+/* HERO */
+.hero {
+  background: var(--cream2);
+  border-bottom: 0.5px solid var(--border);
+  padding: 5rem 2rem 4.5rem;
+  text-align: center;
+  position: relative; overflow: hidden;
+}
+.hero-bar {
+  position: absolute; top: 0; left: 0; right: 0; height: 5px;
+  background: linear-gradient(90deg, var(--teal) 0%, var(--gold) 50%, var(--mid-brown) 100%);
+}
+.hero-tag {
+  display: inline-block;
+  font-size: 11px; font-weight: 500; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--teal);
+  background: var(--teal-light); border-radius: 99px;
+  padding: 4px 14px; margin-bottom: 1.2rem;
+}
+.hero h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(42px, 8vw, 72px);
+  font-weight: 600; line-height: 1.05;
+  color: var(--warm-brown); margin-bottom: 0.6rem;
+}
+.hero-sub {
+  font-size: 15px; color: var(--text-mid);
+  max-width: 480px; margin: 0 auto 1.75rem; line-height: 1.7;
+}
+.hero-chips { display: flex; flex-wrap: wrap; justify-content: center; gap: 7px; margin-bottom: 2rem; }
+.hero-chip {
+  font-size: 12px; padding: 4px 13px; border-radius: 99px;
+  border: 0.5px solid var(--border); color: var(--text-mid);
+  background: var(--cream);
+}
+.btn-row { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+.btn {
+  display: inline-flex; align-items: center; gap: 6px;
+  text-decoration: none; font-size: 13px; font-weight: 500;
+  padding: 10px 22px; border-radius: 99px; transition: all 0.18s;
+  cursor: pointer; border: none;
+}
+.btn-primary { background: var(--teal); color: #fff; border: 1.5px solid var(--teal); }
+.btn-primary:hover { background: #1f5c52; border-color: #1f5c52; }
+.btn-secondary { background: transparent; color: var(--warm-brown); border: 1.5px solid var(--light-brown); }
+.btn-secondary:hover { background: var(--cream2); }
+
+/* SECTIONS */
+section { padding: 4.5rem 2rem; }
+section:nth-child(even) { background: var(--cream2); }
+.container { max-width: 840px; margin: 0 auto; }
+
+.section-eyebrow {
+  font-size: 11px; font-weight: 500; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--teal); margin-bottom: 0.5rem;
+}
+.section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(28px, 5vw, 42px);
+  font-weight: 600; color: var(--warm-brown);
+  margin-bottom: 2rem; line-height: 1.15;
+}
+
+/* ABOUT */
+.about-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 2.5rem; align-items: start;
+}
+@media (max-width: 600px) { .about-grid { grid-template-columns: 1fr; } }
+.about-text p {
+  font-size: 15px; color: var(--text-mid); line-height: 1.75; margin-bottom: 1rem;
+}
+.about-text p:last-child { margin-bottom: 0; }
+.about-stats { display: flex; flex-direction: column; gap: 12px; }
+.stat-card {
+  background: var(--cream); border: 0.5px solid var(--border);
+  border-radius: var(--radius-sm); padding: 1rem 1.2rem;
+  border-left: 3px solid var(--teal);
+}
+.stat-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 30px; font-weight: 600; color: var(--warm-brown); line-height: 1;
+}
+.stat-label { font-size: 12px; color: var(--text-light); margin-top: 3px; }
+
+/* PORTFOLIO TABS */
+.port-tabs { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 1.75rem; }
+.tab-btn {
+  font-size: 13px; font-weight: 500;
+  padding: 7px 16px; border-radius: 99px;
+  border: 0.5px solid var(--border);
+  background: var(--cream); color: var(--text-mid);
+  cursor: pointer; transition: all 0.15s;
+}
+.tab-btn.active, .tab-btn:hover {
+  background: var(--teal); color: #fff; border-color: var(--teal);
+}
+
+/* PORTFOLIO GRID */
+.port-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 14px;
+}
+@media (max-width: 580px) { .port-grid { grid-template-columns: 1fr; } }
+
+.port-card {
+  background: var(--cream); border: 0.5px solid var(--border);
+  border-radius: var(--radius); padding: 1.2rem 1.3rem;
+  transition: box-shadow 0.18s, transform 0.18s;
+  display: flex; flex-direction: column; gap: 6px;
+}
+.port-card:hover { box-shadow: 0 4px 16px rgba(92,64,51,0.10); transform: translateY(-2px); }
+.port-card.hidden { display: none; }
+
+.port-card-cat {
+  font-size: 11px; font-weight: 500; letter-spacing: 0.08em;
+  text-transform: uppercase; color: var(--teal);
+}
+.port-card-title {
+  font-size: 14px; font-weight: 500; color: var(--text-dark); line-height: 1.4;
+}
+.port-card-desc {
+  font-size: 13px; color: var(--text-mid); line-height: 1.55; flex: 1;
+}
+.port-tags { display: flex; flex-wrap: wrap; gap: 5px; }
+.port-tag {
+  font-size: 11px; padding: 2px 9px; border-radius: 99px;
+  border: 0.5px solid var(--border); color: var(--text-light);
+  background: var(--cream2);
+}
+.stat-pills { display: flex; flex-wrap: wrap; gap: 5px; }
+.stat-pill {
+  font-size: 11px; font-weight: 500; padding: 3px 10px;
+  border-radius: 99px; background: var(--teal-light);
+  color: var(--teal); border: 0.5px solid var(--teal-mid);
+}
+
+/* DOWNLOAD BUTTON */
+.download-btn {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 12px; font-weight: 500;
+  color: var(--warm-brown); background: var(--cream2);
+  border: 0.5px solid var(--light-brown);
+  border-radius: 99px; padding: 5px 13px;
+  text-decoration: none; margin-top: 4px;
+  transition: background 0.15s, border-color 0.15s;
+  width: fit-content;
+}
+.download-btn:hover { background: var(--gold-light); border-color: var(--gold); color: var(--warm-brown); }
+.download-btn i { font-size: 14px; }
+
+/* SKILLS */
+.skills-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 14px;
+}
+.skill-card {
+  background: var(--cream); border: 0.5px solid var(--border);
+  border-radius: var(--radius-sm); padding: 1.1rem 1.2rem;
+}
+.skill-icon { font-size: 24px; color: var(--gold); margin-bottom: 8px; }
+.skill-title { font-size: 14px; font-weight: 500; color: var(--text-dark); margin-bottom: 6px; }
+.skill-list { list-style: none; }
+.skill-list li {
+  font-size: 13px; color: var(--text-mid); padding: 2px 0;
+  display: flex; align-items: center; gap: 6px;
+}
+.skill-list li::before {
+  content: ''; width: 4px; height: 4px; border-radius: 50%;
+  background: var(--light-brown); flex-shrink: 0;
+}
+
+/* CONTACT */
+.contact-card {
+  background: var(--cream); border: 0.5px solid var(--border);
+  border-radius: var(--radius); padding: 2.5rem;
+  text-align: center; max-width: 520px; margin: 0 auto;
+}
+.contact-card p {
+  font-size: 15px; color: var(--text-mid); margin-bottom: 1.75rem; line-height: 1.7;
+}
+.contact-items { display: flex; flex-direction: column; gap: 10px; align-items: center; }
+.contact-item { display: flex; align-items: center; gap: 10px; font-size: 14px; color: var(--text-mid); }
+.contact-item i { font-size: 18px; color: var(--teal); }
+
+/* FOOTER */
+footer {
+  background: var(--warm-brown); color: rgba(255,255,255,0.6);
+  text-align: center; padding: 1.75rem 1rem; font-size: 12px;
+}
+footer span { color: rgba(255,255,255,0.85); }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">Naomi Allen</div>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#portfolio">Portfolio</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-bar"></div>
+  <div class="hero-tag">Communications &amp; Marketing Professional</div>
+  <h1>Naomi Allen</h1>
+  <p class="hero-sub">Telling stories that move people. Building campaigns that get results. Connecting communities through faith-driven, purpose-led communication.</p>
+  <div class="hero-chips">
+    <span class="hero-chip">Nonprofit Marketing</span>
+    <span class="hero-chip">Faith-Based Ministry</span>
+    <span class="hero-chip">Grant Writing</span>
+    <span class="hero-chip">Community Outreach</span>
+    <span class="hero-chip">15+ Years Experience</span>
+  </div>
+  <div class="btn-row">
+    <a href="#portfolio" class="btn btn-primary"><i class="ti ti-briefcase"></i> View My Work</a>
+    <a href="#contact" class="btn btn-secondary"><i class="ti ti-mail"></i> Get in Touch</a>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <div class="section-eyebrow">About Me</div>
+    <div class="section-title">Purpose-Driven. People-Focused.</div>
+    <div class="about-grid">
+      <div class="about-text">
+        <p>I'm a communications and marketing professional with over 15 years of experience in ministry, nonprofit, and faith-based organizations. I specialize in building campaigns that connect with real people — not just metrics.</p>
+        <p>My work spans broadcast television scripts and grant writing to multi-channel marketing strategies and community newsletters. I've served churches, nonprofits, and community organizations across the Kansas City area and beyond.</p>
+        <p>I hold a Bachelor's degree in Communication from the University of Texas at Arlington, and I bring both the creative instincts and the data literacy to back up every campaign I run.</p>
+      </div>
+      <div class="about-stats">
+        <div class="stat-card">
+          <div class="stat-num">15+</div>
+          <div class="stat-label">Years in ministry &amp; nonprofit communications</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">$82K+</div>
+          <div class="stat-label">In grants and partnerships secured</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">64%</div>
+          <div class="stat-label">Email open rate — 2.5× the nonprofit industry average</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">739</div>
+          <div class="stat-label">Event attendees reached for just $1.32/guest</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section id="portfolio">
+  <div class="container">
+    <div class="section-eyebrow">Work Samples</div>
+    <div class="section-title">Portfolio</div>
+    <div class="port-tabs">
+      <button class="tab-btn active" onclick="filterCards('all', this)">All</button>
+      <button class="tab-btn" onclick="filterCards('comm', this)">Communication</button>
+      <button class="tab-btn" onclick="filterCards('mktg', this)">Marketing Strategy</button>
+      <button class="tab-btn" onclick="filterCards('script', this)">Script Writing</button>
+      <button class="tab-btn" onclick="filterCards('grant', this)">Grant &amp; Fundraising</button>
+    </div>
+
+    <div class="port-grid">
+
+      <!-- COMMUNICATION -->
+      <div class="port-card" data-cat="comm">
+        <div class="port-card-cat">Communication</div>
+        <div class="port-card-title">Center of Grace — Monthly Newsletter (Dec 2022)</div>
+        <div class="port-card-desc">Multi-page community newsletter covering a $6M renovation, 16,100 meals served, Boys &amp; Girls Club partnership, and a 500+ coat drive. Story-driven writing to engage donors and volunteers.</div>
+        <div class="port-tags"><span class="port-tag">Nonprofit</span><span class="port-tag">Storytelling</span><span class="port-tag">Print</span></div>
+        <a class="download-btn" href="pdfs/newsletter-2022.pdf" download>
+          <i class="ti ti-download"></i> Download PDF
+        </a>
+      </div>
+
+      <div class="port-card" data-cat="comm">
+        <div class="port-card-cat">Communication</div>
+        <div class="port-card-title">Center of Grace — Email Newsletter (March 2023)</div>
+        <div class="port-card-desc">Digital newsletter to 684 subscribers via Constant Contact. Announced a KC Scholars partnership and a $28K+ grant. Achieved double the nonprofit industry average open rate.</div>
+        <div class="port-tags"><span class="port-tag">Email Marketing</span><span class="port-tag">Constant Contact</span></div>
+        <div class="stat-pills"><span class="stat-pill">64% open rate</span><span class="stat-pill">2.5× industry avg.</span></div>
+        <a class="download-btn" href="pdfs/newsletter-2023.pdf" download>
+          <i class="ti ti-download"></i> Download PDF
+        </a>
+      </div>
+
+      <div class="port-card" data-cat="comm">
+        <div class="port-card-cat">Communication</div>
+        <div class="port-card-title">Psalms of Advent — Devotional Booklet (2025)</div>
+        <div class="port-card-desc">Video devotional presenter for Colonial Presbyterian's five-week Advent series (JOY week, Psalm 98). Published in print and digital across two campuses.</div>
+        <div class="port-tags"><span class="port-tag">Faith-Based</span><span class="port-tag">Video Presenter</span><span class="port-tag">Multi-platform</span></div>
+        <a class="download-btn" href="pdfs/advent-booklet.pdf" download>
+          <i class="ti ti-download"></i> Download PDF
+        </a>
+      </div>
+
+      <!-- MARKETING -->
+      <div class="port-card" data-cat="mktg">
+        <div class="port-card-cat">Marketing Strategy</div>
+        <div class="port-card-title">Ignite Marriage Conference — 2024 Marketing Plan</div>
+        <div class="port-card-desc">Full multi-channel marketing plan for the "Spark the Flame" conference. Covered early registration, Christmas gifting campaign, social media timeline, email/text blasts, magazine ads, and grassroots promotion.</div>
+        <div class="port-tags"><span class="port-tag">Multi-channel</span><span class="port-tag">Event Marketing</span><span class="port-tag">Social Media</span></div>
+        <a class="download-btn" href="pdfs/ignite-marriage.pdf" download>
+          <i class="ti ti-download"></i> Download PDF
+        </a>
+      </div>
+
+      <div class="port-card" data-cat="mktg">
+        <div class="port-card-cat">Marketing Strategy</div>
+        <div class="port-card-title">Capital Campaign — "RESTORE" Marketing Plan</div>
+        <div class="port-card-desc">12-month month-by-month marketing calendar for a capital fundraising campaign across two church campuses. Each month tied to a specific project and storytelling format.</div>
+        <div class="port-tags"><span class="port-tag">Capital Campaign</span><span class="port-tag">12-Month Strategy</span><span class="port-tag">Church Comms</span></div>
+        <a class="download-btn" href="pdfs/capital-campaign.pdf" download>
+          <i class="ti ti-download"></i> Download PDF
+        </a>
+      </div>
+
+      <div class="port-card" data-cat="mktg">
+        <div class="port-card-cat">Marketing Strategy</div>
+        <div class="port-card-title">Glow Night Event — Promotional Recap (Oct 2025)</div>
+        <div class="port-card-desc">Managed full event promotion achieving 739 attendees for just $975.44. Facebook drove 44.9% of registrations. QR check-in hit 86% — highest on record.</div>
+        <div class="port-tags"><span class="port-tag">Event Promo</span><span class="port-tag">Facebook Ads</span><span class="port-tag">ROI Analysis</span></div>
+        <div class="stat-pills"><span class="stat-pill">739 attendees</span><span class="stat-pill">$1.32/guest</span></div>
+        <a class="download-btn" href="pdfs/glow-night.pdf" download>
+          <i class="ti ti-download"></i> Download PDF
+        </a>
+      </div>
+
+      <div class="port-card" data-cat="mktg">
+        <div class="port-card-cat">Marketing Strategy</div>
+        <div class="port-card-title">Homefest Fall Party — 2025 Promotional Recap</div>
+        <div class="port-card-desc">Free community event drew 550 guests from 470 registrations. Total spend $1,104.13. Facebook video ads drove the highest ROI with a full channel-by-channel cost breakdown.</div>
+        <div class="port-tags"><span class="port-tag">Community Event</span><span class="port-tag">Facebook Video Ads</span></div>
+        <div class="stat-pills"><span class="stat-pill">550 guests</span><span class="stat-pill">$2.01/attendee</span></div>
+        <a class="download-btn" href="pdfs/homefest.pdf" download>
+          <i class="ti ti-download"></i> Download PDF
+        </a>
+      </div>
+
+      <div class="port-card" data-cat="mktg">
+        <div class="port-card-cat">Marketing Strategy</div>
+        <div class="port-card-title">Center of Grace — Social Media Analytics Report</div>
+        <div class="port-card-desc">Google Analytics comparison report showing 39% website growth, 63.6% rise in event interactions, Facebook reach up 19%, and Instagram impressions up 96.4%.</div>
+        <div class="port-tags"><span class="port-tag">Google Analytics</span><span class="port-tag">Facebook</span><span class="port-tag">Instagram</span></div>
+        <div class="stat-pills"><span class="stat-pill">+39% web views</span><span class="stat-pill">+96% IG impressions</span></div>
+        <a class="download-btn" href="pdfs/analytics-report.pdf" download>
+          <i class="ti ti-download"></i> Download PDF
+        </a>
+      </div>
+
+      <!-- SCRIPT -->
+      <div class="port-card" data-cat="script">
+        <div class="port-card-cat">Script Writing</div>
+        <div class="port-card-title">The Potter's House — PR Broadcast Script (2010)</div>
+        <div class="port-card-desc">Full broadcast TV script for Bishop T.D. Jakes' 30,000-member church. Covered MegaCare's global humanitarian work across Haiti, Kenya, South Africa, and the U.S. Dual-track VO/interview format.</div>
+        <div class="port-tags"><span class="port-tag">Television Script</span><span class="port-tag">Public Relations</span><span class="port-tag">Broadcast Format</span></div>
+        <a class="download-btn" href="pdfs/potters-house-script.pdf" download>
+          <i class="ti ti-download"></i> Download PDF
+        </a>
+      </div>
+
+      <!-- GRANT -->
+      <div class="port-card" data-cat="grant">
+        <div class="port-card-cat">Grant &amp; Fundraising</div>
+        <div class="port-card-title">Olathe Mayor's Children's Fund — $32,000+ (2023)</div>
+        <div class="port-card-desc">Secured one of the fund's largest awards — $28,000 for the Shoe Fund and $4,075 for the Clothing Project — supporting hundreds of children in Olathe.</div>
+        <div class="port-tags"><span class="port-tag">Government Grant</span><span class="port-tag">Children's Services</span></div>
+        <div class="stat-pills"><span class="stat-pill">$32,075 secured</span></div>
+        <a class="download-btn" href="pdfs/fundraising-achievements.pdf" download>
+          <i class="ti ti-download"></i> Download PDF
+        </a>
+      </div>
+
+      <div class="port-card" data-cat="grant">
+        <div class="port-card-cat">Grant &amp; Fundraising</div>
+        <div class="port-card-title">AdventHealth Partnership — $35,000 Gift</div>
+        <div class="port-card-desc">Developed and secured a new corporate donor partnership resulting in a $35,000 contribution to support the Community Outdoor Activity Hub and expanded outreach programming.</div>
+        <div class="port-tags"><span class="port-tag">Corporate Partnership</span><span class="port-tag">Major Gift</span></div>
+        <div class="stat-pills"><span class="stat-pill">$35,000 secured</span></div>
+        <a class="download-btn" href="pdfs/fundraising-achievements.pdf" download>
+          <i class="ti ti-download"></i> Download PDF
+        </a>
+      </div>
+
+      <div class="port-card" data-cat="grant">
+        <div class="port-card-cat">Grant &amp; Fundraising</div>
+        <div class="port-card-title">Saint Luke's Partnership — $15,000 Food Program</div>
+        <div class="port-card-desc">Built a health sector partnership to fund food enrichment programming including nutrition education and meal preparation support for the community.</div>
+        <div class="port-tags"><span class="port-tag">Healthcare Partnership</span><span class="port-tag">Food Security</span></div>
+        <div class="stat-pills"><span class="stat-pill">$15,000 secured</span></div>
+        <a class="download-btn" href="pdfs/fundraising-achievements.pdf" download>
+          <i class="ti ti-download"></i> Download PDF
+        </a>
+      </div>
+
+      <div class="port-card" data-cat="grant">
+        <div class="port-card-cat">Grant &amp; Fundraising</div>
+        <div class="port-card-title">Multi-Funder Grant Portfolio</div>
+        <div class="port-card-desc">Wrote and managed grants from Health Forward, Mazuma Foundation (first staff dev grant in 25 years), Sunflower Foundation, BPEP, HSF, and a Google Ad Grant for Nonprofits.</div>
+        <div class="port-tags"><span class="port-tag">Grant Writing</span><span class="port-tag">Google Ad Grant</span></div>
+        <a class="download-btn" href="pdfs/fundraising-achievements.pdf" download>
+          <i class="ti ti-download"></i> Download PDF
+        </a>
+      </div>
+
+      <div class="port-card" data-cat="grant">
+        <div class="port-card-cat">Grant &amp; Fundraising</div>
+        <div class="port-card-title">Monthly HOPE Donor Program</div>
+        <div class="port-card-desc">Created and launched a recurring giving program built on stewardship-focused messaging. Also transitioned the org to Bloomerang CRM for improved donor tracking and reporting.</div>
+        <div class="port-tags"><span class="port-tag">Recurring Giving</span><span class="port-tag">Donor Stewardship</span><span class="port-tag">Bloomerang CRM</span></div>
+        <a class="download-btn" href="pdfs/fundraising-achievements.pdf" download>
+          <i class="ti ti-download"></i> Download PDF
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="container">
+    <div class="section-eyebrow">What I Do</div>
+    <div class="section-title">Skills &amp; Expertise</div>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <div class="skill-icon"><i class="ti ti-writing" aria-hidden="true"></i></div>
+        <div class="skill-title">Writing &amp; Content</div>
+        <ul class="skill-list">
+          <li>Newsletter writing</li>
+          <li>Grant writing</li>
+          <li>Broadcast scripting</li>
+          <li>Press releases</li>
+          <li>Devotional content</li>
+        </ul>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon"><i class="ti ti-speakerphone" aria-hidden="true"></i></div>
+        <div class="skill-title">Marketing Strategy</div>
+        <ul class="skill-list">
+          <li>Multi-channel campaigns</li>
+          <li>Event promotion</li>
+          <li>Capital campaigns</li>
+          <li>Facebook &amp; Instagram ads</li>
+          <li>Print &amp; digital collateral</li>
+        </ul>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon"><i class="ti ti-chart-line" aria-hidden="true"></i></div>
+        <div class="skill-title">Analytics &amp; Reporting</div>
+        <ul class="skill-list">
+          <li>Google Analytics</li>
+          <li>Social media reporting</li>
+          <li>ROI analysis</li>
+          <li>Email campaign metrics</li>
+          <li>Leadership presentations</li>
+        </ul>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon"><i class="ti ti-heart-handshake" aria-hidden="true"></i></div>
+        <div class="skill-title">Fundraising &amp; Partnerships</div>
+        <ul class="skill-list">
+          <li>Donor stewardship</li>
+          <li>Corporate partnerships</li>
+          <li>Recurring giving programs</li>
+          <li>Bloomerang CRM</li>
+          <li>Constant Contact</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <div class="section-eyebrow">Get in Touch</div>
+    <div class="section-title">Let's Connect</div>
+    <div class="contact-card">
+      <p>I'm open to communications, marketing, and grant writing opportunities — especially in nonprofit, faith-based, and community-focused organizations. I'd love to hear from you.</p>
+      <div class="contact-items">
+        <div class="contact-item">
+          <i class="ti ti-map-pin" aria-hidden="true"></i>
+          <span>Olathe / Lenexa, Kansas area</span>
+        </div>
+        <div class="contact-item">
+          <i class="ti ti-briefcase" aria-hidden="true"></i>
+          <span>Open to full-time, part-time, and consulting roles</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <span>Naomi Allen</span> &nbsp;&middot;&nbsp; Communications &amp; Marketing Professional &nbsp;&middot;&nbsp; Kansas City Area &nbsp;&middot;&nbsp; 2025
+</footer>
+
+<script>
+function filterCards(cat, btn) {
+  document.querySelectorAll('.tab-btn').forEach(function(b) { b.classList.remove('active'); });
+  btn.classList.add('active');
+  document.querySelectorAll('.port-card').forEach(function(card) {
+    if (cat === 'all' || card.getAttribute('data-cat') === cat) {
+      card.classList.remove('hidden');
+    } else {
+      card.classList.add('hidden');
+    }
+  });
+}
+</script>
+</body>
+</html>
